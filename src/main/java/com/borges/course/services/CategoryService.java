@@ -21,7 +21,7 @@ public class CategoryService {
 	
 	public Category findById(Long id) {
 		
-		Optional<Category> order = repository.findById(id);
-		return order.get();
+		Optional<Category> obj = repository.findById(id);
+		return obj.get();
 	}
 }

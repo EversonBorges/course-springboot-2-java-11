@@ -13,15 +13,15 @@ import com.borges.course.repositories.OrderRepository;
 public class OrderService {
 
 	@Autowired
-	private OrderRepository orderRepository;
+	private OrderRepository repository;
 	
 	public List<Order> findAll(){
-		return orderRepository.findAll();
+		return repository.findAll();
 	}
 	
 	public Order findById(Long id) {
 		
-		Optional<Order> order = orderRepository.findById(id);
+		Optional<Order> order = repository.findById(id);
 		return order.get();
 	}
 }
